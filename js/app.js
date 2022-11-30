@@ -64,7 +64,7 @@ function myForm() {
         document.getElementById("size").value = selectedRow.cells[5].innerHTML;
         document.getElementById("weight").value = selectedRow.cells[6].innerHTML;
         document.getElementById("date").value = selectedRow.cells[7].innerHTML;
-    }
+    };
     function updateRecord(formData) {
         selectedRow.cells[0].innerHTML = formData.name;
         selectedRow.cells[1].innerHTML = formData.productNumber;
@@ -74,7 +74,7 @@ function myForm() {
         selectedRow.cells[5].innerHTML = formData.size;
         selectedRow.cells[6].innerHTML = formData.weight;
         selectedRow.cells[7].innerHTML = formData.date;
-    }
+    };
 
     //Delete the data
     function onDelete(td) {
@@ -83,18 +83,14 @@ function myForm() {
             document.getElementById('storeList').deleteRow(row.rowIndex);
             resetForm();
         }
-    }
-    //Reset the data
+    };
+    /*Reset the data
     function resetForm() {
         document.getElementById("productCode").value = '';
         document.getElementById("product").value = '';
         document.getElementById("qty").value = '';
         document.getElementById("perPrice").value = '';
         selectedRow = null;
-    }
+    };*/
 
- onFormSubmit();
- onEdit();
- onDelete();
- console.log("hi2")
  };
